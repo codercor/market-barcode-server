@@ -30,6 +30,6 @@ app.use((err, req, res, next) => {
     }
 })
 */
-app.listen(process.env.SERVER_PORT, () => {
+app.listen( process.env.PORT , () => {
     console.log("Server is running " + `http://localhost:${process.env.SERVER_PORT}`);
 })
