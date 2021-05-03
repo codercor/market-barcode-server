@@ -24,7 +24,11 @@ app.use((err, req, res, next) => {
         res.json({ error: "validation failed" });
     }
 })
-
+app.use("/",(req,res)=>{
+    res.json({
+        message:"selami"
+    })
+})
 app.listen(process.env.SERVER_PORT, () => {
     console.log("Server is running " + `http://localhost:${process.env.SERVER_PORT}`);
 })
