@@ -7,7 +7,12 @@ app.use(express.json());
 app.use(require("cors")())
 
 const { ValidationError } = require("express-validation")
-
+app.get("/",(req,res)=>{
+    res.json({
+        mes:"hello"
+    })
+})
+/*
 app.use((req,res,next)=>{
     console.log(req.headers);
     next();
@@ -24,11 +29,7 @@ app.use((err, req, res, next) => {
         res.json({ error: "validation failed" });
     }
 })
-app.use("/",(req,res)=>{
-    res.json({
-        message:"selami"
-    })
-})
+*/
 app.listen(process.env.SERVER_PORT, () => {
     console.log("Server is running " + `http://localhost:${process.env.SERVER_PORT}`);
 })
